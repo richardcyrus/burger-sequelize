@@ -1,24 +1,24 @@
 {
-  "name": "burger",
+  "name": "burger-sequelize",
   "version": "1.0.0",
   "description": "Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "debug": "DEBUG=burger:* npm start",
+    "debug": "DEBUG=burger-sequelize:* npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/richardcyrus/burger.git"
+    "url": "git+https://github.com/richardcyrus/burger-sequelize.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/richardcyrus/burger/issues"
+    "url": "https://github.com/richardcyrus/burger-sequelize/issues"
   },
-  "homepage": "https://github.com/richardcyrus/burger#readme",
+  "homepage": "https://github.com/richardcyrus/burger-sequelize#readme",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "debug": "^4.1.1",

@@ -1,6 +1,6 @@
-# Eat-Da-Burger!
+# Eat-Da-Burger w/Sequelize!
 
-The application is deployed on Heroku at the following link: [Eat-Da-Burger!](https://eat-da-burger-rgc.herokuapp.com/) 
+The application is deployed on Heroku at the following link: [Eat-Da-Burger!](https://eat-da-burger2-rgc.herokuapp.com/) 
 
 Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
@@ -12,4 +12,4 @@ This app stores every burger in a database, whether devoured or not.
 
 ## Homework Overview
 
-In this assignment, create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Use the MVC design pattern; use Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
+In this assignment, create a burger logger with MySQL, Node, Express, Handlebars and Sequelize (yum!). Use the MVC design pattern; use Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
