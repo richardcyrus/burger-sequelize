@@ -63,10 +63,10 @@
                 url: '/',
                 data: { burgerName: name },
             };
+            form[0].reset();
 
             $.ajax(request)
                 .done(function() {
-                    form[0].reset();
                     location.reload();
                 });
 

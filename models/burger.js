@@ -5,48 +5,23 @@
  * (c) 2019 Richard Cyrus <richard.cyrus@rcyrus.com>
  */
 
-const db = require('../config/orm');
-const table = 'burgers';
+module.exports = (sequelize, DataTypes) => {
+    const burger = sequelize.define('burger', {
+        burgerName: {
+            allowNull: false,
+            field: 'burger_name',
+            type: DataTypes.STRING,
+            validate: { len: [1, 255] }
+        },
+        devoured: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: 0
+        }
+    }, {});
 
-const burger = {
-    /**
-     * Retrieve all records from the database and send the results to
-     * the `callback`.
-     *
-     * @param callback
-     */
-    all: (callback) => {
-        db.selectAll(table, (res) => callback(res));
-    },
-
-    /**
-     * Create a new record in the database, and pass any status to the
-     * `callback`
-     *
-     * @param value
-     * @param callback
-     */
-    create: (value, callback) => {
-        db.insertOne(table, 'burger_name', value, (res) => callback(res));
-    },
-
-    /**
-     * Update a record in the database, and pass any status to the
-     * `callback`
-     *
-     * @param value
-     * @param callback
-     */
-    update: (value, callback) => {
-        const values = {
-            'devoured': true,
-        };
-        const criteria = {
-            'id': value,
-        };
-
-        db.updateOne(table, values, criteria, (res) => callback(res));
-    },
+    burger.associate = function(models) {
+        // associations can be defined here
+    };
+    return burger;
 };
-
-module.exports = burger;
