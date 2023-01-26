@@ -1,12 +1,14 @@
 {
   "name": "burger-sequelize",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "debug": "DEBUG=burger-sequelize:* npm start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "debug": "DEBUG=burger-sequelize:* node ./bin/www",
+    "lint": "prettier --single-quote --write '**/*.{js,json,scss}'",
+    "fix": "eslint --fix .",
+    "dev": "DEBUG=burger-sequelize:* nodemon -e js -w app ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -18,27 +20,36 @@
   "bugs": {
     "url": "https://github.com/richardcyrus/burger-sequelize/issues"
   },
+  "engines": {
+    "node": "18"
+  },
   "homepage": "https://github.com/richardcyrus/burger-sequelize#readme",
   "dependencies": {
-    "cookie-parser": "^1.4.5",
-    "debug": "^4.1.1",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.0.0",
-    "helmet": "^3.23.3",
-    "http-errors": "^1.8.0",
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-dart-sass": "^1.0.4",
+    "express-handlebars": "^6.0.7",
+    "helmet": "^6.0.1",
+    "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
-    "mysql2": "^2.1.0",
-    "node-sass-middleware": "^0.11.0",
-    "sequelize": "^5.22.3"
+    "mysql2": "^3.0.1",
+    "sequelize": "6.28.0"
   },
   "devDependencies": {
-    "eslint": "^7.4.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "sequelize-cli": "^5.5.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3",
+    "sequelize-cli": "6.5.2"
+  },
+  "volta": {
+    "node": "18.13.0"
   }
 }

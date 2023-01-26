@@ -1,6 +1,6 @@
 # Eat-Da-Burger w/Sequelize!
 
-The application is deployed on Heroku at the following link: [Eat-Da-Burger!](https://eat-da-burger2-rgc.herokuapp.com/) 
+The application is deployed on Railway.app at the following link: [Eat-Da-Burger!](https://eat-da-burger2-rgc.up.railway.app/) 
 
 Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
